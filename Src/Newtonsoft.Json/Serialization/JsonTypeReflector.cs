@@ -38,7 +38,11 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
+#if NODEPEND_DOTNETSERIALIZATION
+using Newtonsoft.Json.Serialization;
+#else
 using System.Runtime.Serialization;
+#endif
 
 namespace Newtonsoft.Json.Serialization
 {

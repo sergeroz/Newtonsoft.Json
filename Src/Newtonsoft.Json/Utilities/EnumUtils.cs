@@ -26,7 +26,11 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+#if NODEPEND_DOTNETSERIALIZATION
+using Newtonsoft.Json.Serialization;
+#else
 using System.Runtime.Serialization;
+#endif
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
